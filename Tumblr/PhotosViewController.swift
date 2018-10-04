@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import AlamofireImage
 
 var posts: [[String: Any]] = []
 
@@ -19,7 +19,7 @@ class PhotosViewController: UIViewController,UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        photosTableView.rowHeight = 217
         photosTableView.delegate = self
         photosTableView.dataSource = self
         
@@ -40,6 +40,7 @@ class PhotosViewController: UIViewController,UITableViewDataSource, UITableViewD
                 self.posts = responseDictionary["posts"] as! [[String: Any]]
                 
                 self.photosTableView.reloadData()
+                
 
             }
         }
@@ -54,9 +55,9 @@ class PhotosViewController: UIViewController,UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell") as! photosTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell", for: indexPath) as! photosTableViewCell
         let post = posts[indexPath.row]
-        cell.textLabel?.text = "This is row \(indexPath.row)"
+        //cell.textLabel?.text = "This is row \(indexPath.row)"
         // Configure YourCustomCell using the outlets that you've defined.
         if let photos = post["photos"] as? [[String: Any]] {
             // 1.
@@ -69,8 +70,6 @@ class PhotosViewController: UIViewController,UITableViewDataSource, UITableViewD
             let url = URL(string: urlString)
             
             cell.photoImageView.af_setImage(withURL: url!)
-            
-            tableView.reloadData()
         }
         return cell
     }
