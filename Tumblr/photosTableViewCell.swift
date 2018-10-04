@@ -24,27 +24,4 @@ class photosTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell") as! photosTableViewCell
-        let post = posts[indexPath.row]
-        // Configure YourCustomCell using the outlets that you've defined.
-        if let photos = post["photos"] as? [[String: Any]] {
-            // 1.
-            let photo = photos[0]
-            // 2.
-            let originalSize = photo["original_size"] as! [String: Any]
-            // 3.
-            let urlString = originalSize["url"] as! String
-            // 4.
-            let url = URL(string: urlString)
-            
-            cell.photoImageView.af_setImage(withURL: url!)
-            
-            tableView.reloadData()
-        }
-        
-        
-        return cell
-    }
 }

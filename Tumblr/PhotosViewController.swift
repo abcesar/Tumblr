@@ -39,7 +39,7 @@ class PhotosViewController: UIViewController,UITableViewDataSource, UITableViewD
                 // Store the returned array of dictionaries in our posts property
                 self.posts = responseDictionary["posts"] as! [[String: Any]]
                 
-                
+                self.photosTableView.reloadData()
 
             }
         }
@@ -54,9 +54,25 @@ class PhotosViewController: UIViewController,UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell") as! photosTableViewCell
+        let post = posts[indexPath.row]
         cell.textLabel?.text = "This is row \(indexPath.row)"
-        
+        // Configure YourCustomCell using the outlets that you've defined.
+        if let photos = post["photos"] as? [[String: Any]] {
+            // 1.
+            let photo = photos[0]
+            // 2.
+            let originalSize = photo["original_size"] as! [String: Any]
+            // 3.
+            let urlString = originalSize["url"] as! String
+            // 4.
+            let url = URL(string: urlString)
+            
+            cell.photoImageView.af_setImage(withURL: url!)
+            
+            tableView.reloadData()
+        }
         return cell
     }
+    
 }
