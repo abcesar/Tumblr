@@ -16,9 +16,11 @@ class PhotosViewController: UIViewController,UITableViewDataSource, UITableViewD
     @IBOutlet weak var photosTableView: UITableView!
     
     var posts: [[String: Any]] = []
+    var image: UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         photosTableView.rowHeight = 217
         photosTableView.delegate = self
         photosTableView.dataSource = self
@@ -74,4 +76,10 @@ class PhotosViewController: UIViewController,UITableViewDataSource, UITableViewD
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! PhotosDetailViewController
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        
+    }
 }
