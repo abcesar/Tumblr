@@ -18,7 +18,7 @@
 		DB3129C2216555330035A0CB /* TumblrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3129C1216555330035A0CB /* TumblrUITests.swift */; };
 		DB3129D0216555650035A0CB /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3129CF216555650035A0CB /* PhotosViewController.swift */; };
 		DB3129D2216565C50035A0CB /* photosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3129D1216565C50035A0CB /* photosTableViewCell.swift */; };
-		DBE4D0E321685035006C838A /* PhotosDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE4D0E221685035006C838A /* PhotosDetailViewController.swift */; };
+		DB63ADDC216EA9AB00F658AB /* PhotosDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB63ADDB216EA9AB00F658AB /* PhotosDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +62,7 @@
 		DB3129C3216555330035A0CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB3129CF216555650035A0CB /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		DB3129D1216565C50035A0CB /* photosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photosTableViewCell.swift; sourceTree = "<group>"; };
-		DBE4D0E221685035006C838A /* PhotosDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosDetailViewController.swift; sourceTree = "<group>"; };
+		DB63ADDB216EA9AB00F658AB /* PhotosDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				DB3129CF216555650035A0CB /* PhotosViewController.swift */,
-				DBE4D0E221685035006C838A /* PhotosDetailViewController.swift */,
+				DB63ADDB216EA9AB00F658AB /* PhotosDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -407,8 +407,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB63ADDC216EA9AB00F658AB /* PhotosDetailViewController.swift in Sources */,
 				DB3129A2216555320035A0CB /* AppDelegate.swift in Sources */,
-				DBE4D0E321685035006C838A /* PhotosDetailViewController.swift in Sources */,
 				DB3129D0216555650035A0CB /* PhotosViewController.swift in Sources */,
 				DB3129D2216565C50035A0CB /* photosTableViewCell.swift in Sources */,
 			);

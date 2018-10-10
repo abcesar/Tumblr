@@ -1,23 +1,23 @@
 //
-//  PhototsDetailViewController.swift
+//  PhotosDetailViewController.swift
 //  Tumblr
 //
-//  Created by Cesar Gutierrez on 10/5/18.
+//  Created by Cesar Gutierrez on 10/10/18.
 //  Copyright © 2018 Cesar Gutierrez. All rights reserved.
 //
 
 import UIKit
+import AlamofireImage
 
-class PhototsDetailViewController: UIViewController {
-    
-    @IBOutlet var photoDView: UIImageView!
-    
-    var post: Post!
+class PhotosDetailViewController: UIViewController {
+
+    @IBOutlet weak var photoDView: UIImageView!
+    var photoURL: URL?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        photoDView.setImageWith(posts.imagePath)
+        photoDView.af_setImage(withURL: photoURL!)
     }
-
+    
 }

@@ -55,16 +55,16 @@
             </objects>
             <point key="canvasLocation" x="992.79999999999995" y="26.53673163418291"/>
         </scene>
-        <!--Photots Detail View Controller-->
+        <!--Photos Detail View Controller-->
         <scene sceneID="t9n-hz-bE4">
             <objects>
-                <viewController storyboardIdentifier="Photos Detail View Controller" id="N1Q-bF-Ora" customClass="PhototsDetailViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Photos Detail View Controller" id="N1Q-bF-Ora" customClass="PhotosDetailViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GVb-cQ-DkD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f6f-eH-vje">
-                                <rect key="frame" x="0.0" y="20" width="375" height="218"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="259"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -72,7 +72,7 @@
                         <viewLayoutGuide key="safeArea" id="Zky-SW-7Zm"/>
                     </view>
                     <connections>
-                        <outlet property="photoDView" destination="GVb-cQ-DkD" id="aZU-Fa-dUa"/>
+                        <outlet property="photoDView" destination="f6f-eH-vje" id="4VI-nn-k6C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="urj-So-2QL" userLabel="First Responder" sceneMemberID="firstResponder"/>
